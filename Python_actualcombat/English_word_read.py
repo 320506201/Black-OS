@@ -1,20 +1,4 @@
-text = {"morning":"早上",
-        "afternoon":"下午",
-        "evening":"晚上，傍晚",
-        "night":"夜晚",
-        "Miss":"小姐",
-        "mum":"妈妈",
-        "dad":"爸爸",
-        "this":"这个",
-        "is":"是",
-        "Mr":"先生",
-        "a":"一个",
-        "teddy":"泰迪熊",
-        "box":"盒子",
-        "yes":"是的，对的",
-        "bag":"包",
-        "no":"不，不是，没有",
-        "puppy":"小狗",}
+text = open("English_word.json","r")
 x = 0
 
 def e ():
