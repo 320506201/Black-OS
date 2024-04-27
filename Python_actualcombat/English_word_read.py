@@ -21,8 +21,8 @@ def e ():
     query = input("单词含义查询：")
     if query in text:
         print("单词：" + query + "，含义：" + text[query])
-        x = input()
-        if x == "离开":
+        x = int(input())
+        if x == 1:
             return 0
         else :
             e()
