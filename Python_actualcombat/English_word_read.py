@@ -1,4 +1,7 @@
-text = open("English_word.json","r")
+import json
+with open ("/Users/apple/Desktop/python_code/Python_actualcombat/English_word.json","r") as fp:
+    text = json.load(fp)
+    print (text)
 x = 0
 
 def e ():
