@@ -18,6 +18,7 @@ def e ():
         print("当前有" + str(len(text)-1) + "个单词")
         x = int(input())
         if x == 1 :
+            print("good bye")
             return 0
         else :
             e()
