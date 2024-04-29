@@ -15,7 +15,7 @@ def e ():
             e()
     else:
         print("Error: " + "don\'t have")
-        print("当前有" + str(len(text)) + "个单词")
+        print("当前有" + str(len(text)-1) + "个单词")
         x = int(input())
         if x == 1 :
             return 0
