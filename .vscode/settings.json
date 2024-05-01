@@ -12,5 +12,6 @@
     "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
     "editor.fontSize": 10,
     "python.analysis.typeCheckingMode": "basic",
-    "livePreview.defaultPreviewPath": "/Python_actualcombat/FPS/index.html"
+    "livePreview.defaultPreviewPath": "/Python_actualcombat/FPS/index.html",
+    "editor.fontFamily": "\"editor.fontFamily\": \"PinyonScript-Regular, 'Courier New', monospace\""
 }
