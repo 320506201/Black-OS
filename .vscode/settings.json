@@ -11,5 +11,6 @@
     "editor.accessibilityPageSize": 20,
     "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
     "editor.fontSize": 10,
-    "python.analysis.typeCheckingMode": "basic"
+    "python.analysis.typeCheckingMode": "basic",
+    "livePreview.defaultPreviewPath": "/Python_actualcombat/FPS/index.html"
 }

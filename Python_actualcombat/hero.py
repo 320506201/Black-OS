@@ -16,7 +16,7 @@ hp = 100
 level = 1
 menny = 100
 midicine = 0
-boss_hp = 1000
+boss_hp = 100
 i = 1
 print("你来到了一片荒芜之地，你发现了一条小路，你决定前进。")
 print("你走了很久，终于来到了一座山顶，你发现了一条通往山脚的小路。")
@@ -47,16 +47,16 @@ def gameloop():
                 while enemy_hp > 0:
                     print("你攻击了敌人！")
                     enemy_hp -= random.randrange(10,50,10)
+                    hp -= random.randrange(10,50,10)
                     if enemy_hp <= 0:
                         print("你击败了敌人！")
-                        hp -= random.randrange(10,50,10)
                         xp += random.randrange(10,50,10)
                         menny += random.randrange(10,50,10)
                         gameloop()
                     else:
                         print("敌人剩余生命：" + str(enemy_hp))
                         print("你还有" + str(hp) + "生命值")
-                    time.sleep(0.5)
+                    time.sleep(0.25)
             elif choice == "2":
                 if menny >= 10:
                     print("已购买血包")
@@ -72,10 +72,11 @@ def gameloop():
                     if boss_hp <= 0:
                         print("你击败了boss")
                         print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-                        menny += 1000
-                        xp += 1500
-                        boss_hp = 1000 * i
+                        menny += 100
+                        xp += 100
+                        level += 5
                         i += 1
+                        boss_hp = 100 * i
                         return ()
                     else:
                         print("boss剩余生命:" + str(boss_hp))
