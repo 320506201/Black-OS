@@ -1,17 +1,22 @@
 #引入模块
+from fileinput import filename
+from math import log
 import time
 import json
 import configparser
+import logging
 #定义变量
 user_in = ""
 disk = ("A")
-version = "2.0"
+version = "2.1"
 config = configparser.ConfigParser()
 config.read(r"G:\python_code\Python_actualcombat\xsystemc\config.ini")
 user_name = config['DEFAULT']["user_name"]
 password = config['DEFAULT']["password"]
 all_disk = config['DEFAULT']["all_disk"]
 are_first = config['DEFAULT'].getboolean('are_first')
+logging.basicConfig(filename=r"G:\python_code\Python_actualcombat\xsystemc\Black_OS.log",level=logging.DEBUG,format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger('Black_OS_logger')
 #定义函数
 def cd(disk_name):
     """ 更改当前磁盘 """
@@ -60,6 +65,7 @@ def Loop():
             print(files[disk])
         #e
         elif user_in == "exit":
+            logger.info(f"user {user_name} logout")
             break
         #f
         #g
@@ -88,6 +94,9 @@ def Loop():
                 if user_in == "":
                     print("unlocking...")
                     break
+        elif user_in == "logout":
+            with open(r"G:\python_code\Python_actualcombat\xsystemc\Black_OS.log","r",encoding="utf-8") as logout:
+                print(logout.read())
         #m
         elif user_in ==("mf"):
             user_in = input("file name:")
@@ -131,13 +140,16 @@ def start():
         user_in = input("password:")
         if user_in ==password:
             print(f"Hello",user_name)
+            logger.info(f"user {user_name} login")
             Loop()
         else:
             print("password error")
             time.sleep(1)
+            logger.warning(f"user {user_name} login failed")
     else:
         print("no user")
-        time.sleep(1)            
+        time.sleep(1)
+        logger.warning(f"user {user_name} login failed")            
 
 def write(date,adder):
     with open(r"G:\python_code\Python_actualcombat\xsystemc\file.json", 'r') as f:
