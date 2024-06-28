@@ -13,5 +13,6 @@
     "editor.fontSize": 13,
     "python.analysis.typeCheckingMode": "basic",
     "livePreview.defaultPreviewPath": "/Python_actualcombat/FPS/index.html",
-    "editor.fontFamily": "\"editor.fontFamily\": \"PinyonScript-Regular, 'Courier New', monospace\""
+    "editor.fontFamily": "\"editor.fontFamily\": \"PinyonScript-Regular, 'Courier New', monospace\"",
+    "python.analysis.autoImportCompletions": true
 }
