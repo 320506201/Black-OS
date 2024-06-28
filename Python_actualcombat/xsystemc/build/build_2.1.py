@@ -8,7 +8,7 @@ import logging
 #定义变量
 user_in = ""
 disk = ("A")
-version = "2.2"
+version = "2.1"
 config = configparser.ConfigParser()
 config.read(r"G:\python_code\Python_actualcombat\xsystemc\config.ini")
 user_name = config['DEFAULT']["user_name"]
@@ -83,8 +83,6 @@ def Loop():
     exit => exit black OS
     help => show help message
     lock => lock black OS
-    logout => show log file
-    logc => clear log file
     restart => restart black OS
     subtract => subtract two numbers
     version => show black OS version""")
@@ -101,9 +99,6 @@ def Loop():
         elif user_in == "logout":
             with open(r"G:\python_code\Python_actualcombat\xsystemc\Black_OS.log","r",encoding="utf-8") as logout:
                 print(logout.read())
-        elif user_in == "logc":
-            with open(r"G:\python_code\Python_actualcombat\xsystemc\Black_OS.log","w",encoding="utf-8") as logout:
-                logout.write("")
         #m
         elif user_in ==("mf"):
             user_in = input("file name:")
@@ -168,7 +163,7 @@ def write(date,adder):
         json.dump(wait, f)
 #启动程序
 print("          -----BLACK OS-----")
-print("from xsc at 2023-6-28 14.00")
+print("from xsc at 2023-6-28 10.00")
 if are_first == True:
     print("admin password is 123")
     config["DEFAULT"].update({"are_first": "False"})
