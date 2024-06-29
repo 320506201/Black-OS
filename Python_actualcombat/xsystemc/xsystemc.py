@@ -1,5 +1,4 @@
 #引入模块
-from fileinput import filename
 from math import log
 import time
 import json
